@@ -1,0 +1,19 @@
+/* nb-list::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  nb-list::-webkit-scrollbar-thumb{
+    background-color: #e4e9f2;
+  } */
+input {
+  max-width: unset !important;
+}
+
+.layout {
+  min-width: unset !important;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none !important;
+}

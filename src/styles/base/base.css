@@ -1,0 +1,35 @@
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-space-between {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex-space-between-column {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+  .flex-center-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .flex-center-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hidden {
+    display: none !important;
+  }
+  .required {
+    color: red;
+  }
+  .line {
+    height: 2px;
+    background: #edf1f7;
+  }
