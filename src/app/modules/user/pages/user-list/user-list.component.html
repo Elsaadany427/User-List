@@ -5,7 +5,7 @@
   <div class="container">
     <div class="row">
       <div class="col-4" *ngFor="let user of filteredUsers">
-        <app-user-card [user]="user"></app-user-card>
+        <app-user-card [user]="user" [loading]="loading$|async"></app-user-card>
       </div>
     </div>
     <div class="pagination justify-content-center mt-4">

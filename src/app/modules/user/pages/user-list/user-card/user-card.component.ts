@@ -8,4 +8,6 @@ import { Iuser } from '../../../models/user.model';
 })
 export class UserCardComponent {
   @Input() user!: Iuser;
+  @Input() loading !: boolean | null;
+  
 }
