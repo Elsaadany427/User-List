@@ -1,9 +1,14 @@
 <section class="user-list section-padding">
-<div class="container">
-  <div class="row">
-    <div class="col-3" >
-      <app-user-card *ngFor="let user of users" [user]="user"></app-user-card>
+  <div class="container">
+    <div class="row">
+      <div class="col-4" *ngFor="let user of users">
+        <app-user-card [user]="user"></app-user-card>
+      </div>
+    </div>
+    <div class="pagination justify-content-center mt-4">
+      <button class="btn btn-primary mr-2" [disabled]="currentPage === 1" (click)="onPageChange(currentPage - 1)">Previous</button>
+      <span class="align-self-center px-3">Page {{ currentPage }} of {{ totalPages }}</span>
+      <button class="btn btn-primary ml-2" [disabled]="currentPage === totalPages" (click)="onPageChange(currentPage + 1)">Next</button>
     </div>
   </div>
-</div>
 </section>

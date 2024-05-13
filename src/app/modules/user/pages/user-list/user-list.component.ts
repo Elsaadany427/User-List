@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Iuser } from '../../models/user.model';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-user-list',
@@ -7,7 +8,24 @@ import { Iuser } from '../../models/user.model';
   styleUrls: ['./user-list.component.css'],
 })
 export class UserListComponent {
-  users: Iuser[] = [
-    { id: 1, first_name: 'John', last_name: 'Bassem', avatar: "https://reqres.in/img/faces/3-image.jpg", email:"emma.wong@reqres.in", age:5},
-  ];
+  users: Iuser[] = [];
+  currentPage = 1;
+  totalPages: any = 1;
+  constructor(private userService: UserService) {}
+
+  ngOnInit(): void {
+    this.loadUsers();
+  }
+
+  loadUsers(): void {
+    this.userService.getUsers(this.currentPage).subscribe((data: any) => {
+      this.users = data.data;
+      this.totalPages = data.total_pages;
+    });
+  }
+
+  onPageChange(page: number): void {
+    this.currentPage = page;
+    this.loadUsers();
+  }
 }
