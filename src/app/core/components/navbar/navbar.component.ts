@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  @Output() searchChange = new EventEmitter<string>();
 
+  onSearch(event: Event): void {
+    const query = (event.target as HTMLInputElement).value;
+    this.searchChange.emit(query);
+    console.log(query);
+  }
 }

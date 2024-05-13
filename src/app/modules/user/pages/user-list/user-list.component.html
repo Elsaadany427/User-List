@@ -1,7 +1,10 @@
+<app-navbar (searchChange)="onSearchChange($event)"></app-navbar>
+<app-header></app-header>
+
 <section class="user-list section-padding">
   <div class="container">
     <div class="row">
-      <div class="col-4" *ngFor="let user of users">
+      <div class="col-4" *ngFor="let user of filteredUsers">
         <app-user-card [user]="user"></app-user-card>
       </div>
     </div>

@@ -9,8 +9,11 @@ import { UserService } from '../../services/user.service';
 })
 export class UserListComponent {
   users: Iuser[] = [];
+  filteredUsers: Iuser[] = [];
   currentPage = 1;
-  totalPages: any = 1;
+  totalPages = 1;
+  totalPagesArray: number[] = [];
+
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
@@ -21,11 +24,26 @@ export class UserListComponent {
     this.userService.getUsers(this.currentPage).subscribe((data: any) => {
       this.users = data.data;
       this.totalPages = data.total_pages;
+      this.totalPagesArray = Array.from(
+        { length: this.totalPages },
+        (_, i) => i + 1
+      );
+      this.applySearchFilter('');
     });
   }
 
   onPageChange(page: number): void {
     this.currentPage = page;
     this.loadUsers();
+  }
+
+  applySearchFilter(query: string): void {
+    this.filteredUsers = this.users.filter((user) =>
+      user.id.toString().includes(query.toLowerCase())
+    );
+  }
+
+  onSearchChange(query: string): void {
+    this.applySearchFilter(query);
   }
 }
