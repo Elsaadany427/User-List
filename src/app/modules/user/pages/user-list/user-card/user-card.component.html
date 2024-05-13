@@ -1,9 +1,6 @@
+
 <div class="card">
-  <div class="card-header">
-    <h5 class="card-title">{{ user.first_name }} {{ user.last_name }}</h5>
-  </div>
-  <div class="card-body">
-    <p class="card-text">{{user.email}}</p>
-    <a href="#" class="btn btn-primary">User Details</a>
-  </div>
+  <img src="{{ user.avatar }}" alt="user" />
+  <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+  <span>{{ user.email }}</span>
 </div>
