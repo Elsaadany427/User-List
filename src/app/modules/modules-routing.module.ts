@@ -8,7 +8,7 @@ const routes: Routes = [
     component: ModulesComponent,
     children: [
       {
-        path: 'users-list',
+        path: 'users',
         loadChildren: () =>
           import('./user/user.module').then(
             m => m.UserModule
@@ -16,7 +16,12 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: 'users-list',
+        redirectTo: 'users',
+        pathMatch: 'full',
+      },
+      {
+        path: '**',
+        redirectTo: 'users',
         pathMatch: 'full',
       },
     ],

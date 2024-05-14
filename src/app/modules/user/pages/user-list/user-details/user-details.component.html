@@ -1,0 +1,41 @@
+<section class="user-details section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <a routerLink="/users" class="btn btn-primary" data-mdb-ripple-init
+          ><i class="fas fa-arrow-left-long"></i> Go Back To Users List</a
+        >
+      </div>
+    </div>
+    <div class="row justify-center">
+      <ng-container *ngIf="!loading && user; else userDetailsTemplate">
+        <div class="col-8">
+          <div class="user-details-info">
+            <div class="img-box">
+              <img [src]="user.avatar" alt="img" />
+              <i class="fas fa-quote-right"></i>
+            </div>
+            <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+            <span>{{ user.email }}</span>
+          </div>
+        </div>
+      </ng-container>
+      <ng-template #userDetailsTemplate>
+        <div class="col-8">
+          <div class="user-details-info">
+            <div class="img-box card-img-top">
+              <img src="..." alt="..." />
+              <i class="fas fa-quote-right placeholder"></i>
+            </div>
+            <h3
+              class="user-details-title placeholder-glo d-flex justify-center align-center flex-center-column"
+            >
+              <span class="placeholder col-3 mb-3"></span>
+              <span class="placeholder col-4"></span>
+            </h3>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,81 @@
+.img {
+    margin: 15px 0;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.img img {
+    display: block;
+    width: 100%;
+}
+
+.user-details-info {
+    margin: 8%;
+}
+
+.user-details-info ul li h5 {
+    margin-bottom: 50px;
+    color: #919191;
+}
+
+
+.user-details-info {
+    margin: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.user-details-info .img-box {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    margin-bottom: 30px;
+    border: 4px solid #a200ff;
+    border-radius: 50%;
+    position: relative;
+}
+
+.user-details-info .img-box img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.user-details-info .img-box i {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: #a200ff;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+    left: 85%;
+    top: 32.5%;
+}
+
+.user-details-info p {
+    font-size: 16px;
+    margin: 0 0 20px;
+    color: #555;
+    line-height: 26px;
+    font-weight: 300;
+}
+
+.user-details-info h3 {
+    font-size: 22px;
+    color: #000;
+    font-weight: 500;
+    margin: 0 0 5px;
+    text-transform: capitalize;
+}
+
+.user-details-info span {
+    display: block;
+    font-size: 16px;
+    color: #555;
+    font-weight: 300;
+}

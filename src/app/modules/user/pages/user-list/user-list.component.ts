@@ -34,6 +34,9 @@ export class UserListComponent {
       );
       this.applySearchFilter('');
       this.loadingSubject.next(false);
+    },
+    (error: any) => {
+      console.error('Error fetching user data:', error);
     });
   }
 

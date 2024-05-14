@@ -49,6 +49,10 @@
 .section-title h2 span {
     color: #7311EA;
 }
+.btn{
+  background-color: #7311EA !important;
+  border: none !important;
+}
 .section-padding {
   padding: 80px 0;
 }

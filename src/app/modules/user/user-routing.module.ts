@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {UserComponent} from "./user.component"
 import {UserListComponent} from "./pages/user-list/user-list.component"
+import { UserDetailsComponent } from './pages/user-list/user-details/user-details.component';
 
 const routes: Routes = [
   {
@@ -13,11 +14,16 @@ const routes: Routes = [
         component: UserListComponent,
       },
       {
-        path: 'user/:userId',
-        component: UserListComponent,
+        path: 'user-details/:userId',
+        component: UserDetailsComponent,
       },
       {
         path: '',
+        redirectTo: 'users-list',
+        pathMatch: 'full',
+      },
+      {
+        path: '**',
         redirectTo: 'users-list',
         pathMatch: 'full',
       },

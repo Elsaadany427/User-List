@@ -1,7 +1,11 @@
-<ng-container *ngIf="!loading; else userCardTemplate">
+<ng-container *ngIf="!loading && user; else userCardTemplate">
   <div class="card">
-    <img src="{{ user.avatar }}" alt="user" />
-    <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+    <img [src]="user.avatar" alt="user" />
+    <h3>
+      <a [routerLink]="['/users/user-details', user.id]">
+        {{ user.first_name }} {{ user.last_name }}
+      </a>
+    </h3>
     <span>{{ user.email }}</span>
   </div>
 </ng-container>

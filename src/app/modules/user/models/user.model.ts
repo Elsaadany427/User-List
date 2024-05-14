@@ -4,5 +4,4 @@ export interface Iuser {
   first_name: string;
   last_name: string;
   avatar: string;
-  age: number;
 }

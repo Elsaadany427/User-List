@@ -5,7 +5,8 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.card h3 {
+.card h3,
+.card h3 a {
   font-size: 18px;
   color: #000;
   font-weight: 500;
